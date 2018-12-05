@@ -1,0 +1,64 @@
+
+.button[data-v-121f81] {
+  display: inline-block;
+}
+@keyframes identifier-data-v-121f81 {
+from {
+    transform: rotateZ(0deg);
+}
+to {
+    transform: rotateZ(360deg);
+}
+}
+.button .g-button[data-v-121f81] {
+  font-size: var(--font-size);
+  height: var(--font-height);
+  display: flex;
+  align-items: center;
+  padding: 0.4em 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background: var(--button-bg);
+}
+.button .g-button .icon[data-v-121f81] {
+  animation: identifier-data-v-121f81 1s infinite linear;
+  transform-origin: center;
+}
+.button .g-button .icon .iconfont[data-v-121f81] {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.button .g-button[data-v-121f81]:active {
+  border-color: var(--button-active-bg);
+}
+.button .g-button[data-v-121f81]:hover {
+  cursor: pointer;
+  border-color: var(--border-color-hover);
+}
+.button .g-button[data-v-121f81]:focus {
+  outline: none;
+}
+.button .round[data-v-121f81] {
+  border-radius: 20px;
+}
+.button .plain[data-v-121f81]:hover {
+  background-color: var(--button-active-bg);
+}
+.button .g-button[disabled][data-v-121f81] {
+  cursor: not-allowed;
+  color: #bcbec2;
+  background-color: #f4f4f5;
+  border-color: #e9e9eb;
+}
+.button .right > .icon[data-v-121f81] {
+  order: 2;
+}
+.button .right > .content[data-v-121f81] {
+  order: 1;
+}
+.button + .button[data-v-121f81] {
+  margin-left: 10px;
+}
