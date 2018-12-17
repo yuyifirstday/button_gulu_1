@@ -2,12 +2,12 @@
     <div class="button">
         <button :class="{'g-button': true, 'plain': plain, 'round': round, [position]: true}" :disabled="disabled">
             <div class="icon" v-if="icon">
-                <i :class="'iconfont i-' + this.icon" ></i>
+                <i :class="'iconfont i-' + icon" ></i>
             </div>
             <div class="content">
                 <slot></slot>
-            </div>        
-        </button>        
+            </div>
+        </button>
     </div>
 </template>
 <script>

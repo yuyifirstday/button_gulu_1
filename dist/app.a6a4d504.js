@@ -11319,7 +11319,165 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],"src/button.vue":[function(require,module,exports) {
+},{}],"src/app.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'App',
+  data: function data() {
+    return {
+      value: ''
+    };
+  }
+};
+exports.default = _default;
+        var $7c1d9d = exports.default || module.exports;
+      
+      if (typeof $7c1d9d === 'function') {
+        $7c1d9d = $7c1d9d.options;
+      }
+    
+        /* template */
+        Object.assign($7c1d9d, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { attrs: { id: "app" } },
+    [
+      _c(
+        "div",
+        [
+          _c("g-button", { attrs: { disabled: "" } }, [
+            _vm._v("\n      禁用\n    ")
+          ]),
+          _vm._v(" "),
+          _c(
+            "g-button",
+            { attrs: { icon: "loading", position: "right", loading: "" } },
+            [_vm._v("\n        加载中\n    ")]
+          ),
+          _vm._v(" "),
+          _c("g-button", { attrs: { round: "round" } }, [
+            _vm._v("\n      圆角按钮\n    ")
+          ]),
+          _vm._v(" "),
+          _c("g-button", { attrs: { plain: "plain" } }, [
+            _vm._v("\n      hover按钮\n    ")
+          ]),
+          _vm._v(" "),
+          _c("g-button", [_vm._v("\n      主按钮\n    ")])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("g-input", {
+            attrs: { placeholder: "请输入内容", icon: "close" },
+            model: {
+              value: _vm.value,
+              callback: function($$v) {
+                _vm.value = $$v
+              },
+              expression: "value"
+            }
+          }),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.value))])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "g-row",
+        { attrs: { gutter: "2", justify: "start" } },
+        [
+          _c("g-col", [_vm._v("\n      dfds\n    ")]),
+          _vm._v(" "),
+          _c("g-col", [_vm._v("\n      sdfsd\n    ")])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-7c1d9d",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$7c1d9d', $7c1d9d);
+          } else {
+            api.reload('$7c1d9d', $7c1d9d);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/button.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11356,14 +11514,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $121f81 = exports.default || module.exports;
+        var $3deed4 = exports.default || module.exports;
       
-      if (typeof $121f81 === 'function') {
-        $121f81 = $121f81.options;
+      if (typeof $3deed4 === 'function') {
+        $3deed4 = $3deed4.options;
       }
     
         /* template */
-        Object.assign($121f81, (function () {
+        Object.assign($3deed4, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -11384,7 +11542,7 @@ exports.default = _default;
       [
         _vm.icon
           ? _c("div", { staticClass: "icon" }, [
-              _c("i", { class: "iconfont i-" + this.icon })
+              _c("i", { class: "iconfont i-" + _vm.icon })
             ])
           : _vm._e(),
         _vm._v(" "),
@@ -11401,7 +11559,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-121f81",
+            _scopeId: "data-v-3deed4",
             functional: undefined
           };
         })());
@@ -11414,9 +11572,314 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$121f81', $121f81);
+            api.createRecord('$3deed4', $3deed4);
           } else {
-            api.reload('$121f81', $121f81);
+            api.reload('$3deed4', $3deed4);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/input.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'guluInput',
+  props: ['placeholder', 'disabled', 'icon', 'value', 'error'],
+  data: function data() {
+    return {};
+  },
+  computed: {// inputListeners: function () {
+    //   var vm = this
+    //   // `Object.assign` 将所有的对象合并为一个新对象
+    //   return Object.assign({},
+    //     // 我们从父级添加所有的监听器
+    //     this.$listeners,
+    //     // 然后我们添加自定义监听器，
+    //     // 或覆写一些监听器的行为
+    //     {
+    //       // 这里确保组件配合 `v-model` 的工作
+    //       input: function (event) {
+    //         console.log(event)
+    //         event.target.value = ""
+    //         vm.$emit('input', event.target.value)
+    //       }
+    //     }
+    //   )
+    // }
+  },
+  methods: {
+    iconClick: function iconClick() {
+      console.log(this.input, 'input'); // Object.defineProperty('input', 'key', {
+      //   value: ''
+      // })
+    }
+  },
+  watch: {// value(val) {
+    //   if (val) {
+    //   }
+    // }
+  }
+};
+exports.default = _default;
+        var $979dfa = exports.default || module.exports;
+      
+      if (typeof $979dfa === 'function') {
+        $979dfa = $979dfa.options;
+      }
+    
+        /* template */
+        Object.assign($979dfa, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "g-input" }, [
+    _c("input", {
+      class: { error: _vm.error },
+      attrs: {
+        type: "text",
+        placeholder: _vm.placeholder,
+        disabled: _vm.disabled
+      },
+      domProps: { value: _vm.value },
+      on: {
+        change: function($event) {
+          _vm.$emit("change", $event.target.value)
+        },
+        input: function($event) {
+          _vm.$emit("input", $event.target.value)
+        },
+        focus: function($event) {
+          _vm.$emit("focus", $event.target.value)
+        },
+        blur: function($event) {
+          _vm.$emit("blur", $event.target.value)
+        }
+      }
+    })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-979dfa",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$979dfa', $979dfa);
+          } else {
+            api.reload('$979dfa', $979dfa);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/row.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+var _default = {
+  name: 'guguRow',
+  props: {
+    gutter: {
+      type: [Number, String]
+    },
+    justify: {
+      type: String,
+      validator: function validator(value) {
+        return ['start', 'end', 'center'].includes(value);
+      }
+    }
+  },
+  data: function data() {
+    return {};
+  },
+  computed: {
+    rowStyle: function rowStyle() {
+      var gutter = this.gutter;
+      return {
+        marginLeft: -gutter / 2 + 'px',
+        marginRight: -gutter / 2 + 'px'
+      };
+    },
+    rowClass: function rowClass() {
+      var aligin = this.aligin;
+      return [aligin && "aligin-".concat(justify)];
+    }
+  }
+};
+exports.default = _default;
+        var $880a68 = exports.default || module.exports;
+      
+      if (typeof $880a68 === 'function') {
+        $880a68 = $880a68.options;
+      }
+    
+        /* template */
+        Object.assign($880a68, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "g-row", class: _vm.rowClass, style: _vm.rowStyle },
+    [_vm._t("default")],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-880a68",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$880a68', $880a68);
+          } else {
+            api.reload('$880a68', $880a68);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/col.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+var _default = {
+  name: 'guluCol',
+  props: {
+    span: {
+      type: [Number, String]
+    },
+    offset: {
+      type: [Number, String]
+    }
+  },
+  data: function data() {
+    return {
+      gutter: 0
+    };
+  }
+};
+exports.default = _default;
+        var $f6f147 = exports.default || module.exports;
+      
+      if (typeof $f6f147 === 'function') {
+        $f6f147 = $f6f147.options;
+      }
+    
+        /* template */
+        Object.assign($f6f147, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "g-col" }, [_vm._t("default")], 2)
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-f6f147",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f6f147', $f6f147);
+          } else {
+            api.reload('$f6f147', $f6f147);
           }
         }
 
@@ -11432,17 +11895,34 @@ render._withStripped = true
 
 var _vue = _interopRequireDefault(require("vue"));
 
+var _app = _interopRequireDefault(require("./app.vue"));
+
 var _button = _interopRequireDefault(require("./button"));
+
+var _input = _interopRequireDefault(require("./input"));
+
+var _row = _interopRequireDefault(require("./row"));
+
+var _col = _interopRequireDefault(require("./col"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import './components/svg';
 _vue.default.component('g-button', _button.default);
 
+_vue.default.component('g-input', _input.default);
+
+_vue.default.component('g-row', _row.default);
+
+_vue.default.component('g-col', _col.default);
+
 new _vue.default({
-  el: '#app'
+  el: '#app',
+  render: function render(h) {
+    return h(_app.default);
+  }
 });
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue"}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./app.vue":"src/app.vue","./button":"src/button.vue","./input":"src/input.vue","./row":"src/row.vue","./col":"src/col.vue"}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11469,7 +11949,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54756" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55428" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
