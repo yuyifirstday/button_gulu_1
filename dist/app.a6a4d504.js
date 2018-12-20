@@ -11432,11 +11432,15 @@ exports.default = _default;
       _vm._v(" "),
       _c(
         "g-row",
-        { attrs: { gutter: "2", justify: "start" } },
+        { attrs: { gutter: "4", justify: "start" } },
         [
-          _c("g-col", [_vm._v("\n      dfds\n    ")]),
+          _c("g-col", { attrs: { span: "2", offset: "1" } }, [
+            _vm._v("\n      dfds\n    ")
+          ]),
           _vm._v(" "),
-          _c("g-col", [_vm._v("\n      sdfsd\n    ")])
+          _c("g-col", { attrs: { span: "2", offset: "4" } }, [
+            _vm._v("\n      sdfsd\n    ")
+          ])
         ],
         1
       )
@@ -11732,7 +11736,7 @@ exports.default = void 0;
 //
 //
 var _default = {
-  name: 'guguRow',
+  name: 'GuguRow',
   props: {
     gutter: {
       type: [Number, String]
@@ -11759,6 +11763,13 @@ var _default = {
       var aligin = this.aligin;
       return [aligin && "aligin-".concat(justify)];
     }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$children.forEach(function (vm) {
+      vm.gutter = _this.gutter;
+    });
   }
 };
 exports.default = _default;
@@ -11821,13 +11832,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 //
 //
 //
 //
 //
 var _default = {
-  name: 'guluCol',
+  name: 'GuluCol',
   props: {
     span: {
       type: [Number, String]
@@ -11840,6 +11860,48 @@ var _default = {
     return {
       gutter: 0
     };
+  },
+  mounted: function mounted() {
+    // let { span, offset, ipad, narrowPc, pc, widePc } = this;
+    console.log(this, 'span');
+  },
+  methods: {
+    createCasses: function createCasses(obj) {
+      var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+      if (!obj) return [];
+      var array = [];
+
+      if (obj.span) {
+        array.push("col-".concat(str).concat(obj.span));
+      }
+
+      if (obj.offset) {
+        array.push("offset-".concat(str).concat(obj.offset));
+      }
+
+      return array;
+    }
+  },
+  computed: {
+    colClass: function colClass() {
+      var span = this.span,
+          offset = this.offset,
+          ipad = this.ipad,
+          narrowPc = this.narrowPc,
+          pc = this.pc,
+          widePc = this.widePc;
+      var createClasses = this.createCasses;
+      return _toConsumableArray(createClasses({
+        span: span,
+        offset: offset
+      })).concat(_toConsumableArray(createClasses(ipad, 'ipad-')), _toConsumableArray(createClasses(narrowPc, 'narrow-pc-')), _toConsumableArray(createClasses(pc, 'pc-')), _toConsumableArray(createClasses(widePc, 'wide-pc-')));
+    },
+    colStyle: function colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + 'px',
+        paddingRight: this.gutter / 2 + 'px'
+      };
+    }
   }
 };
 exports.default = _default;
@@ -11855,7 +11917,12 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "g-col" }, [_vm._t("default")], 2)
+  return _c(
+    "div",
+    { staticClass: "g-col", class: _vm.colClass, style: _vm.colStyle },
+    [_vm._t("default")],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -11949,7 +12016,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55428" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65054" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -106,7 +106,9 @@ to {
 }
 .g-row[data-v-880a68] {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
+  border: 1px solid;
 }
 .align-start[data-v-880a68] {
   justify-content: flex-start;
@@ -116,6 +118,10 @@ to {
 }
 .align-center[data-v-880a68] {
   justify-content: center;
+}
+.g-col[data-v-f6f147] {
+  border: 1px solid red;
+  background-color: #eee;
 }
 .g-col.col-1[data-v-f6f147] {
   width: 4.1666666667%;
@@ -188,4 +194,76 @@ to {
 }
 .g-col.col-24[data-v-f6f147] {
   width: 100%;
+}
+.g-col.offset-1[data-v-f6f147] {
+  margin-left: 4.1666666667%;
+}
+.g-col.offset-2[data-v-f6f147] {
+  margin-left: 8.3333333333%;
+}
+.g-col.offset-3[data-v-f6f147] {
+  margin-left: 12.5%;
+}
+.g-col.offset-4[data-v-f6f147] {
+  margin-left: 16.6666666667%;
+}
+.g-col.offset-5[data-v-f6f147] {
+  margin-left: 20.8333333333%;
+}
+.g-col.offset-6[data-v-f6f147] {
+  margin-left: 25%;
+}
+.g-col.offset-7[data-v-f6f147] {
+  margin-left: 29.1666666667%;
+}
+.g-col.offset-8[data-v-f6f147] {
+  margin-left: 33.3333333333%;
+}
+.g-col.offset-9[data-v-f6f147] {
+  margin-left: 37.5%;
+}
+.g-col.offset-10[data-v-f6f147] {
+  margin-left: 41.6666666667%;
+}
+.g-col.offset-11[data-v-f6f147] {
+  margin-left: 45.8333333333%;
+}
+.g-col.offset-12[data-v-f6f147] {
+  margin-left: 50%;
+}
+.g-col.offset-13[data-v-f6f147] {
+  margin-left: 54.1666666667%;
+}
+.g-col.offset-14[data-v-f6f147] {
+  margin-left: 58.3333333333%;
+}
+.g-col.offset-15[data-v-f6f147] {
+  margin-left: 62.5%;
+}
+.g-col.offset-16[data-v-f6f147] {
+  margin-left: 66.6666666667%;
+}
+.g-col.offset-17[data-v-f6f147] {
+  margin-left: 70.8333333333%;
+}
+.g-col.offset-18[data-v-f6f147] {
+  margin-left: 75%;
+}
+.g-col.offset-19[data-v-f6f147] {
+  margin-left: 79.1666666667%;
+}
+.g-col.offset-20[data-v-f6f147] {
+  margin-left: 83.3333333333%;
+}
+.g-col.offset-21[data-v-f6f147] {
+  margin-left: 87.5%;
+}
+.g-col.offset-22[data-v-f6f147] {
+  margin-left: 91.6666666667%;
+}
+.g-col.offset-23[data-v-f6f147] {
+  margin-left: 95.8333333333%;
+}
+.g-col.offset-24[data-v-f6f147] {
+  margin-left: 100%;
 }

@@ -22,11 +22,11 @@
       <p>{{ value }}</p>
       <!-- <g-input value="dfd" placeholder="请输入内容" icon="close" error="error"></g-input> -->
     </div>
-    <g-row gutter="2" justify="start">
-      <g-col>
+    <g-row gutter="4" justify="start">
+      <g-col span="2" offset="1">
         dfds
       </g-col>
-      <g-col>
+      <g-col span="2" offset="4">
         sdfsd
       </g-col>
     </g-row>

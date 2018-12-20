@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'guguRow',
+  name: 'GuguRow',
   props: {
     gutter: {
       type: [Number, String]
@@ -13,7 +13,7 @@ export default {
     justify: {
       type: String,
       validator(value) {
-        return ['start', 'end', 'center'].includes(value)
+        return ['start', 'end', 'center'].includes(value);
       }
     }
   },
@@ -24,20 +24,27 @@ export default {
   },
   computed: {
     rowStyle () {
-      let { gutter } = this
-      return { marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px' }
+      let { gutter } = this;
+      return { marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px' };
     },
     rowClass() {
       let { aligin } = this;
-      return [ aligin && `aligin-${justify}`]
+      return [ aligin && `aligin-${justify}`];
     }
+  },
+  mounted() {
+    this.$children.forEach(vm => {
+      vm.gutter = this.gutter;
+    })
   }
 }
 </script>
 <style lang="scss" scoped>
 .g-row {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
+  border: 1px solid;
 }
 .align-start {
   justify-content: flex-start;
